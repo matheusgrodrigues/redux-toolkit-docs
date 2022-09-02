@@ -32,13 +32,13 @@ Leitura da documentação do Redux Toolkit
 ### APIs inclusas
 
 - O Redux Toolkit inclui estas APIs:
-  - configureStore(): wraps createStore para fornecer opções de configuração simplificadas e bons padrôes.
+  - **configureStore()**: wraps createStore para fornecer opções de configuração simplificadas e bons padrôes.
     - Ele pode combinar automaticamente seus reducers de slice, adicionar qualquer middleware Redux que você fornecer, incluir redux-thunk por padrão, e permite o uso da Extensão Redux DevTools.
-- createReducer(): que permite fornecer uma tabela de pesquisa de tipos de ação para funções de reducers de maiúsculas e minúsculas, em vez de escrever instruções switch. Além disso, ele usa automaticamente o immer mutativo normal, como `state.todos[3].completed = true`
-- createAction(): gera uma função de createAction para a string de tipo de ação fornecida. A função em si tem toString() definido, para que possa saer usado no lugar da constante de tipo.
-- createSlice(): aceita um objeto de funções reducers, um nome de slice e um valor de estado inicial e gera automaticamente um reducer de slice com createActions e tipos de ação correspondentes.
-- createAsyncThunk: aceita uma string de tipo de ação e uma função que retorna uma promisse e gera uma conversão que despacha `pendind/fullied/rejected` tipos de ação com base nessa promisse.
-- createEntityAdapter: gera um conjunto de reducers e selectors reutilizáveis para gerenciar dados normalizados na loja.
+- **createReducer()**: que permite fornecer uma tabela de pesquisa de tipos de ação para funções de reducers de maiúsculas e minúsculas, em vez de escrever instruções switch. Além disso, ele usa automaticamente o immer mutativo normal, como `state.todos[3].completed = true`
+- **createAction()**: gera uma função de createAction para a string de tipo de ação fornecida. A função em si tem toString() definido, para que possa saer usado no lugar da constante de tipo.
+- **createSlice()**: aceita um objeto de funções reducers, um nome de slice e um valor de estado inicial e gera automaticamente um reducer de slice com createActions e tipos de ação correspondentes.
+- **createAsyncThunk:** aceita uma string de tipo de ação e uma função que retorna uma promisse e gera uma conversão que despacha `pendind/fullied/rejected` tipos de ação com base nessa promisse.
+- **createEntityAdapter:** gera um conjunto de reducers e selectors reutilizáveis para gerenciar dados normalizados na loja.
 - o helper createSelector da Reselect, reescrito para facilidade de uso.
 
 ### RTK Query
@@ -54,7 +54,7 @@ Leitura da documentação do Redux Toolkit
 
 #### RTK APIs inclusas
 
-- createApi(): O núcleo da funcionalidade do RTK Query. Ele permite que você defina um conjunto de endpoints que descreva como recuperar dados de uma série de endpoints, incluindo a configuração de como buscar e transformar dados.
-- fetchBaseQuery(): Um pequeno wrapper de fetch que visa simplificar os pedidos de busca de dados.
-- `<ApiProvider />`: Pode ser usado como Provider se você ainda não tiver uma store Redux.
-- setupListeners(): Um utilitário usado para habilitar comportamentos refetchOnMount e refetchOnreconnect.
+- **createApi()**: O núcleo da funcionalidade do RTK Query. Ele permite que você defina um conjunto de endpoints que descreva como recuperar dados de uma série de endpoints, incluindo a configuração de como buscar e transformar dados.
+- **fetchBaseQuery()**: Um pequeno wrapper de fetch que visa simplificar os pedidos de busca de dados.
+- **`<ApiProvider />`**: Pode ser usado como Provider se você ainda não tiver uma store Redux.
+- **setupListeners()**: Um utilitário usado para habilitar comportamentos refetchOnMount e refetchOnreconnect.
