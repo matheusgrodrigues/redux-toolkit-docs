@@ -7,6 +7,10 @@ Leitura da documentação do Redux Toolkit
   - [APIs inclusas](#apis-inclusas)
   - [RTK Query](#rtk-query)
     - [APIs inclusas](#rtk-apis-inclusas)
+- [Get started](#get-started)
+  - [createStore](#createstore)
+  - [createSlice](#createslice)
+  - [resumo](#resumo-get-started)
 
 ## Comecando
 
@@ -58,3 +62,38 @@ Leitura da documentação do Redux Toolkit
 - **fetchBaseQuery()**: Um pequeno wrapper de fetch que visa simplificar os pedidos de busca de dados.
 - **`<ApiProvider />`**: Pode ser usado como Provider se você ainda não tiver uma store Redux.
 - **setupListeners()**: Um utilitário usado para habilitar comportamentos refetchOnMount e refetchOnreconnect.
+
+### Get started
+
+- Para criar uma store utilizamos createStore de `@reduxjs/toolkit`.
+- Para compartilhar a store no app utilizamos o component `{Provider}` `<Provider store={store}/>` de `react-redux`.
+- Para criar fatias utilizamos `createSlice` de `@reduxjs/toolkit`.
+
+
+#### createStore
+
+- Cria um store Redux e também configura a extensão React DevTools para que você possa inspecionar a store durante o desenvolvimento.
+- Uma vez criada, podemos compartilhar para nossos componentes React através do `Provider`.
+
+#### createSlice
+
+- Requer um nome de string para identifica-la, um valor de estado inicial e uma ou mais função redutoras para definir como o estado por ser atualizado.
+- Depois que um slice é criado, podemos exportar os criadores de ação Redux gerador e a função redutora para todo o slice.
+- O Redux exige que escrevamos todas as atualizações de estado de forma imutável, fazendo cópias de dados e atualizando as cópias.
+- O Redux Toolkit `createSlice` e `createReducer` usam immer dentro para nos permitir escrever uma lógica de atualização "mutante" que torna as atualizações imutáveis corretas.
+
+#### Resumo get started
+
+- Crie uma store Redux com `configureStore`
+  - `configureStore` aceita um `reducer` como argumento nomeado.
+  - `configureStore` configura automaticamente a store com boas configurações por padrão.
+- Compartilhe a store Redux para os componentes React.
+  - Coloque um `react-redux <Provider />` em torno do seu `<App/>`.
+  - Passe a store Redux como props do Provider.
+- Crie um recuder de "slice" com `createSlice`.
+  - nomear `createSlice` com um nome de string, um estado inicial, e funções redutoras nomeadas.
+  - Funções reducers "mutam" o estado usando immer.
+  - Exporte o reducer de slice gerado e os criadores de ação.
+- Use o react-redux `useSelector/useDispatch` em componentes React.
+  - Para ler os dados use `useSelector`.
+  - Para despachar ações use `useDispatch`.
