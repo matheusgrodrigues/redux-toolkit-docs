@@ -69,7 +69,6 @@ Leitura da documentação do Redux Toolkit
 - Para compartilhar a store no app utilizamos o component `{Provider}` `<Provider store={store}/>` de `react-redux`.
 - Para criar fatias utilizamos `createSlice` de `@reduxjs/toolkit`.
 
-
 #### createStore
 
 - Cria um store Redux e também configura a extensão React DevTools para que você possa inspecionar a store durante o desenvolvimento.
@@ -99,4 +98,3 @@ Leitura da documentação do Redux Toolkit
   - Para despachar ações use `useDispatch`.
 - A partir do React Redux v7.2.3, o pacote react-redux tem uma dependência @types/react-redux, para que as definições de tipo sejam instaladas automaticamente com a biblioteca.
 - O modelo Redux+TS para create-react-app já vem com um exemplo funcional desses padrôes já configurados.
-
