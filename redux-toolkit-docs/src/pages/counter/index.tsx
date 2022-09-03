@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../../hooks/hooks";
 import Counter from "../../features/counter/counter";
 import {
   increment,
@@ -7,7 +7,7 @@ import {
 } from "../../features/counter/counterSlice";
 
 export default function PageCounter() {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   return (
     <div>

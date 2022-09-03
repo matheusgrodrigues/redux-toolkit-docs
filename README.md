@@ -90,10 +90,13 @@ Leitura da documentação do Redux Toolkit
 - Compartilhe a store Redux para os componentes React.
   - Coloque um `react-redux <Provider />` em torno do seu `<App/>`.
   - Passe a store Redux como props do Provider.
-- Crie um recuder de "slice" com `createSlice`.
+- Crie um reduder de "slice" com `createSlice`.
   - nomear `createSlice` com um nome de string, um estado inicial, e funções redutoras nomeadas.
   - Funções reducers "mutam" o estado usando immer.
   - Exporte o reducer de slice gerado e os criadores de ação.
 - Use o react-redux `useSelector/useDispatch` em componentes React.
   - Para ler os dados use `useSelector`.
   - Para despachar ações use `useDispatch`.
+- A partir do React Redux v7.2.3, o pacote react-redux tem uma dependência @types/react-redux, para que as definições de tipo sejam instaladas automaticamente com a biblioteca.
+- O modelo Redux+TS para create-react-app já vem com um exemplo funcional desses padrôes já configurados.
+
